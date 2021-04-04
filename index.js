@@ -32,10 +32,6 @@ mysqlConnection.connect((err) => {
 // });
 
 
-app.get('/get',(req, res) => {
-    console.log('test')
- 
-});
 
 
 app.post('/post',(req, res) => {
