@@ -40,7 +40,7 @@ app.get('/get',(req, res) => {
 
 app.post('/post',(req, res) => {
     let data = {user:req.body.Username, userDate:req.body.Date,mistakes:req.body.wrong,count:req.body.count};
-    console.log(req, 'test')
+    // console.log(req, 'test')
     // console.log(data, 't')
     let query = "INSERT INTO QuizInfo SET ?";
     mysqlConnection.query(query, data,(err, results) => {

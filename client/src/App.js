@@ -4,7 +4,6 @@ import qBank from './query/index';
 import Question from './components/Question';
 import Score from './components/Score';
 import "./App.css";
-// import Form from './components/Form';
 import axios from "axios";
 
 class Quiz extends Component {
@@ -53,8 +52,6 @@ class Quiz extends Component {
   
  shuffle = (array) =>{
     var currentIndex = array.length;
-    // var citrus = qBank.slice(1, 2);
-// console.log(citrus , 'test')
     var randomArray = []
     while(randomArray.length !== currentIndex) {  
       var randomIndex = Math.floor(Math.random() * currentIndex);
@@ -132,15 +129,12 @@ render(){
     
      
       <div className="content">
-    {/* <Form /> */}
     <div>
         <form>
         <label class="lable">
           Name: 
           <input type="text"  name="Username" placeholder="Enter your Name" value={this.state.Username}  onChange={this.onChange} required></input>
         </label>
-        {/* <input type="Date"  name="Date" placeholder="Enter the Date" value={this.state.Date}  onChange={this.onChange} required></input> */}
-        {/* <button type="submit" className="btn-submit">submit</button> */}
         <h1 class="userName">Hii {this.state.Username}!</h1>
    
         </form>
@@ -167,7 +161,6 @@ render(){
             score={this.state.score}
             count={this.state.count}
             wrong={this.state.wrong}
-            // status={this.EndGame}
             playAgain={this.playAgain}
           />{this.EndGame()}</h4>)
           : null
