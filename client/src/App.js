@@ -36,6 +36,8 @@ class Quiz extends Component {
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
     today =  yyyy+"-"+mm+"-"+dd;
+
+    
     const newUser = {
       Username: this.state.Username,
       Date: today,
@@ -44,7 +46,7 @@ class Quiz extends Component {
 
     }
     const response = axios.post(
-          "http://localhost:3002/post",
+          "https://pure-brushlands-31575.herokuapp.com/post",
           newUser
         );
           console.log(response,"k");
